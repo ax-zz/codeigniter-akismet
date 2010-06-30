@@ -5,6 +5,8 @@
 		function __contruct()
 		{
 			parent::Controller();
+			
+			$this->load->add_package_path(APPPATH.'third_party/haughin/codeigniter-facebook/');
 		}
 		
 		function index()
