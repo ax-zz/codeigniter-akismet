@@ -10,7 +10,7 @@
 		
 		private static $_curl_opts = array(
 			CURLOPT_CONNECTTIMEOUT => 10,
-			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_RETURNTRANSFER => TRUE,
 			CURLOPT_TIMEOUT        => 60,
 			CURLOPT_USERAGENT      => 'codeigniter-akismet-2.0'
 		);
@@ -19,7 +19,7 @@
 		{
 			$this->_obj =& get_instance();
 			
-			$this->_obj->load->helper('akismet');
+			$this->_obj->load->config('akismet');
 			
 			$this->_api_key 	= $this->_obj->config->item('akismet_api_key');
 			$this->_blog_url 	= $this->_obj->config->item('akismet_blog_url');
